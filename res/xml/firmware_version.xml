@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- Maritim Logo -->
+    <Preference
+        android:key="maritim_logo"
+        android:selectable="false"
+        settings:layout="@layout/maritim_logo" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
@@ -29,6 +35,14 @@
         settings:enableCopying="true"
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
+
+    <!-- maritim. version -->
+    <Preference
+        android:key="maritim_revision"
+        android:title="@string/maritim_revision"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.maritimRevisionPreferenceController"/>
 
     <!-- Security patch -->
     <Preference
